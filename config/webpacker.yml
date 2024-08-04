@@ -90,3 +90,7 @@ production:
 
   # Cache manifest.json for performance
   cache_manifest: true
+
+default:
+  source_entry_path: app/javascript
+  public_root_path: public

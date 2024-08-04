@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: darkslateblue;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+}
+.header-menus {
+  margin: 40px 100px 5px 0;
+  padding: 0 100px;
+}
+
+.table1 th {
+  padding: 10px 20px;
+  border-bottom: 2px solid gray;
+}
+.table1 td {
+  background-color: #c1ced7;
+  padding: 10px 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10%;
+}
+
+//詳細画面
+.table2 th {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90%;
+}
+
+.large-circle {
+  font-size: 36px; 
+}
+
+ul {
+    list-style: none;
+  }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
