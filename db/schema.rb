@@ -28,13 +28,13 @@ ActiveRecord::Schema.define(version: 2024_08_04_141132) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "title"
+    t.text "content"
     t.datetime "start_datetime"
     t.datetime "end_datetime"
     t.boolean "is_all_day", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "memo"
   end
 
