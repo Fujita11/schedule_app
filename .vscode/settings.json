@@ -1,0 +1,11 @@
+{
+    "solargraph.completion": true,
+    "solargraph.suggestions": true,
+    "search.useIgnoreFiles": true,
+    "search.exclude": {
+        "**/*.code-search": false,
+        "**/bower_components": false,
+        "**/node_modules": false
+    }
+}
+

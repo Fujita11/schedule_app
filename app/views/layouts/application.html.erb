@@ -8,9 +8,21 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+  </head>  
+  
   <body>
+    <header>
+      <div class="header-logo">
+       <p>スケジュール管理アプリ</p>
+      </div>
+    </header> 
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%=  flash[:notice] %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

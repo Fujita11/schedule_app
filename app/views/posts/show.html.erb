@@ -1,0 +1,29 @@
+<div class="posts-show-item">
+    <%= link_to("← 一覧に戻る", posts_path) %>
+</div>
+
+<div class="post-wrapper">
+  <p class="post-content"><%= @post.content %></p>
+  <div class="post-menus">
+    <%= link_to("編集", edit_post_path(@post)) %> 
+  </div>
+</div>
+
+<div class="post-details">
+  <div class="post-detail">
+    <span class="label">開始日:</span>
+    <span class="value"><%= @post.start_datetime.strftime('%Y/%m/%d') %></span>
+  </div>
+  <div class="post-detail">
+    <span class="label">終了日:</span>
+    <span class="value"><%= @post.end_datetime.strftime('%Y/%m/%d') %></span>
+  </div>
+  <div class="post-detail">
+    <span class="label">終日:</span>
+    <span class="value"><%= @post.is_all_day ? '○' : '' %></span>
+  </div>
+  <div class="post-detail">
+    <span class="label">スケジュールメモ:</span>
+    <span class="value"><%= @post.memo %></span>
+  </div>
+</div>

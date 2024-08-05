@@ -1,0 +1,45 @@
+<div class="header-main">
+  <p class="header-menus">予定一覧</p>
+  <p class="header-menus"><%= link_to "新規追加", :new_post %></p>
+</div>
+
+<table class="table1">
+  <tr>
+    <th>id</th>
+    <th>タイトル</th>
+    <th>開始日</th>
+    <th>終了日</th>
+    <th>終日</th>
+    <th>更新日時</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+ <tbody>
+   <% @posts.each do |post|%>
+    <tr>
+      <td><%= post.id %></td>
+      <td><%= post.content %></td> 
+      <td><%= post.start_datetime.present? ? post.start_datetime.strftime('%Y-%m-%d') : '未設定' %></td>
+      <td><%= post.end_datetime.present? ? post.end_datetime.strftime('%Y-%m-%d') : '未設定' %></td>
+      <td class="large-circle"><%= post.is_all_day ? '○' : '' %></td>
+      <td><%= post.updated_at.in_time_zone('Tokyo').strftime('%Y/%m/%d %H:%M') %></td>
+      <td><%= link_to "詳細", post_path(post) %></td>
+      <td><%= link_to "編集", edit_post_path(post) %></td>
+      <td><%= link_to "削除", post_path(post), method: :delete, data: { confirm: "予定を削除しますか？" } %></td> 
+    </tr>
+   <% end %>
+ </tbody>
+</table>
+
+<footer>
+  <p>予定合計 <%= @total_posts %>件</p>
+  <p class="footer1">本日の日付 <%= @today.strftime('%Y/%m/%d') %></p>
+</footer>
+
+
+
+
+
+
